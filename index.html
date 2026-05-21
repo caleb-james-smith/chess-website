@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-board-theme="standard" data-piece-set="standard">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">&#9822;</span>
+      <span class="brand-name">Chess</span>
+    </div>
+    <div class="settings">
+      <label class="setting">
+        <span>Pieces</span>
+        <select id="set-pieces">
+          <option value="standard">Standard</option>
+          <option value="neo">Neo</option>
+        </select>
+      </label>
+      <label class="setting">
+        <span>Board</span>
+        <select id="set-board">
+          <option value="standard">Tan &amp; Brown</option>
+          <option value="neo">Cream &amp; Green</option>
+        </select>
+      </label>
+      <button id="theme-toggle" class="btn btn-ghost" type="button">Dark</button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section id="home-screen" class="view">
+      <div class="home">
+        <div class="home-hero">
+          <h1>Play Chess</h1>
+          <p>Three local modes. No sign-up, no server &mdash; just chess.</p>
+        </div>
+
+        <div class="mode-grid" id="mode-grid">
+          <button class="mode-card" data-mode="hvh" type="button">
+            <span class="mode-icon">&#9823;&nbsp;&#9817;</span>
+            <span class="mode-title">Human vs Human</span>
+            <span class="mode-desc">Two players, one device. The board flips to face whoever is on the move.</span>
+          </button>
+          <button class="mode-card" data-mode="hvai" type="button">
+            <span class="mode-icon">&#9823;&nbsp;&#9822;</span>
+            <span class="mode-title">Human vs AI</span>
+            <span class="mode-desc">Take on the built-in engine at three strengths.</span>
+          </button>
+          <button class="mode-card" data-mode="ava" type="button">
+            <span class="mode-icon">&#9822;&nbsp;&#9816;</span>
+            <span class="mode-title">AI vs AI</span>
+            <span class="mode-desc">Sit back and watch two engines play it out.</span>
+          </button>
+        </div>
+
+        <div class="home-options" id="home-options">
+          <div class="option-group">
+            <label class="field">
+              <span class="field-label">Time control</span>
+              <select id="opt-time">
+                <option value="unlimited">Unlimited</option>
+                <option value="blitz">Blitz &mdash; 5 min</option>
+                <option value="rapid" selected>Rapid &mdash; 10 min</option>
+                <option value="rapidInc">Rapid &mdash; 10 min + 5s</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="option-group mode-only hidden" data-for="hvai">
+            <label class="field">
+              <span class="field-label">You play</span>
+              <select id="opt-human-color">
+                <option value="white" selected>White</option>
+                <option value="black">Black</option>
+                <option value="random">Random</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">AI strength</span>
+              <select id="opt-ai-difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="option-group mode-only hidden" data-for="ava">
+            <label class="field">
+              <span class="field-label">First AI</span>
+              <select id="opt-ai-white">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Second AI</span>
+              <select id="opt-ai-black">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Move pace</span>
+              <select id="opt-delay">
+                <option value="300">Fast</option>
+                <option value="600" selected>Normal</option>
+                <option value="1200">Slow</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <button id="start-btn" class="btn btn-primary btn-large" type="button" disabled>
+          Select a mode
+        </button>
+      </div>
+    </section>
+
+    <section id="game-view" class="view hidden">
+      <div class="game-status" id="game-status"></div>
+      <div class="game-layout">
+        <aside class="panel panel-left">
+          <div id="player-cards"></div>
+          <div id="game-controls" class="controls"></div>
+        </aside>
+        <div class="board-wrap">
+          <div id="board"></div>
+        </div>
+        <aside class="panel panel-right">
+          <h2 class="panel-title">Moves</h2>
+          <ol id="move-history" class="move-history"></ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
