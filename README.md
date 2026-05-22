@@ -33,7 +33,7 @@ The site uses ES modules, which browsers only load over HTTP — not directly fr
 file. Clone the repo and start a static server:
 
 ```
-git clone git@github.com:caleb-james-smith/chess-website.git
+git clone https://github.com/caleb-james-smith/chess-website.git
 cd chess-website
 python3 -m http.server 8000
 ```
