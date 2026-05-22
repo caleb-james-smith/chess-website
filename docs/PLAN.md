@@ -54,7 +54,7 @@ A built-in AI used by Human vs AI and AI vs AI modes, with three difficulty leve
 
 - A move-history panel listing moves in standard algebraic notation.
 - Undo / takeback of moves.
-- Per-player game clocks with selectable time controls: Unlimited, 5+0, 10+0.
+- Per-player game clocks with selectable time controls: Unlimited, 1+0, 5+0, 10+0.
 - When a piece is selected, its legal destination squares are highlighted with a
   transparent blue overlay.
 - The origin and destination of the most recent move (by either player) are

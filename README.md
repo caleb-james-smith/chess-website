@@ -15,7 +15,7 @@ JavaScript — no frameworks and no build step.
   stalemate, threefold repetition, the fifty-move rule, and insufficient material.
 - **Move history** in standard algebraic notation.
 - **Undo / takeback.**
-- **Game clocks** — Unlimited, 5+0 (blitz), or 10+0 (rapid).
+- **Game clocks** — Unlimited, 1+0 (bullet), 5+0 (blitz), or 10+0 (rapid).
 - **Players & scoring** — name each player; scores carry across multiple games in a
   match (win = 1, draw = ½, loss = 0); colors alternate every game.
 - **Move highlighting** — selected piece's legal destinations in blue; the previous

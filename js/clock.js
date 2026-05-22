@@ -4,6 +4,7 @@
 
 export const TIME_CONTROLS = {
   unlimited: { label: 'Unlimited', initialMs: null, incrementMs: 0 },
+  bullet: { label: 'Bullet 1+0', initialMs: 1 * 60 * 1000, incrementMs: 0 },
   blitz: { label: 'Blitz 5+0', initialMs: 5 * 60 * 1000, incrementMs: 0 },
   rapid: { label: 'Rapid 10+0', initialMs: 10 * 60 * 1000, incrementMs: 0 },
   rapidInc: { label: 'Rapid 10+5', initialMs: 10 * 60 * 1000, incrementMs: 5000 }
