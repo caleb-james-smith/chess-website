@@ -4,6 +4,10 @@ A browser-based chess game with three local play modes, a built-in AI opponent,
 move history, game clocks, and light/dark theming. Built with plain HTML, CSS, and
 JavaScript — no frameworks and no build step.
 
+## Live demo
+
+**<https://caleb-james-smith.github.io/chess-website/>**
+
 ## Features
 
 - **Three game modes**
@@ -15,7 +19,7 @@ JavaScript — no frameworks and no build step.
   stalemate, threefold repetition, the fifty-move rule, and insufficient material.
 - **Move history** in standard algebraic notation.
 - **Undo / takeback.**
-- **Game clocks** — Unlimited, 1+0 (bullet), 5+0 (blitz), or 10+0 (rapid).
+- **Game clocks** — Unlimited, 1+0 (bullet), 5+0 (blitz), 10+0 (rapid), or 10+5 (rapid with increment).
 - **Players & scoring** — name each player; scores carry across multiple games in a
   match (win = 1, draw = ½, loss = 0); colors alternate every game.
 - **Move highlighting** — selected piece's legal destinations in blue; the previous
@@ -26,15 +30,34 @@ JavaScript — no frameworks and no build step.
 ## Running locally
 
 The site uses ES modules, which browsers only load over HTTP — not directly from a
-file. Start a static server from the project directory:
+file. Clone the repo and start a static server:
 
 ```
+git clone git@github.com:caleb-james-smith/chess-website.git
+cd chess-website
 python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000> in your browser. (`npx serve` works too.)
 
 No installation or build step is required.
+
+## Deploying your own fork
+
+Because the site is pure static files with no build step, it deploys directly on
+GitHub Pages:
+
+1. **Fork** this repository on GitHub.
+2. In your fork, go to **Settings → Pages**.
+3. Under **Source**, choose **Deploy from a branch**, select the **main** branch
+   and the **/ (root)** folder, then click **Save**.
+4. After a minute or two, GitHub will publish the site. The URL appears on the
+   Pages settings page:
+   ```
+   https://<your-username>.github.io/chess-website/
+   ```
+
+No CI pipeline or additional configuration needed.
 
 ## How to play
 

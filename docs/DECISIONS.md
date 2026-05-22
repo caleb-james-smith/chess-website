@@ -109,3 +109,18 @@ import it directly.
 the `.js` files as ES modules (the engine and tests use `import`/`export`). It
 declares no dependencies — `npm install` does nothing — and the browser ignores it,
 so the "no build step / nothing to install" properties hold.
+
+---
+
+## 2026-05-22 — Hosting on GitHub Pages
+
+**Decision:** Deploy the site on GitHub Pages, served directly from the `main`
+branch root.
+
+**Rationale:** The project is already a pure static site with no build step, so
+GitHub Pages requires zero additional tooling or configuration — just enabling the
+Pages feature in the repository settings.
+
+**Alternatives considered:** Netlify, Vercel — both support static sites and would
+also work, but require an extra account or project setup beyond the existing GitHub
+repository.

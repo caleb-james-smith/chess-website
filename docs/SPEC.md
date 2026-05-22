@@ -115,7 +115,7 @@ The engine exposes a small API, e.g. `createGame()`, `legalMoves(state)`,
 ## Clocks (`clock.js`)
 
 - Two countdown timers driven by a single interval. Presets: Unlimited (no clock),
-  1+0, 5+0, 10+0. A player reaching zero loses on time (flag).
+  1+0, 5+0, 10+0, 10+5. A player reaching zero loses on time (flag).
 
 ## UI (`ui.js`)
 
